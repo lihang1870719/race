@@ -138,7 +138,7 @@ function doNumberFlow (result) {
             }
 
             currentTime = new Date();
-            if ((currentTime - startTime) < 15000) {
+            if ((currentTime - startTime) < 4000) {
                 stats.update();
                 //renderer.render( scene, camera )
                 /*if(cY < dY) {

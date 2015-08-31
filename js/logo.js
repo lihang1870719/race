@@ -98,6 +98,7 @@ function showLogo() {
         function render_dg() {
             // /group.rotation.y += ( targetRotation - group.rotation.y ) * 0.05;
             var destinationY = 0;
+            render();
             if (group.position.y < destinationY) {
                 group.position.y += 5;
             } else if (group.position.y === destinationY) {
@@ -106,7 +107,7 @@ function showLogo() {
                 group.position.y += 5;
             }
             group.rotation.y += Math.PI/90;
-            render();
+
             requestAnimationFrame(render_dg);
         }
         function threeStart() {
@@ -119,10 +120,10 @@ function showLogo() {
             addShape(trackShape, 0x00ff00, 0, -200, 0);
             addShape(trackShape, 0x00ff00, 0, -250, 0, 0, 0, 0, 0.8);
             addShape(halfEllipseShape, 0x00ff00, 0, -300, 0, 0);
-            var xx=0.013;
-            totalGroup.scale.set(xx,xx,xx)
-            totalGroup.position.x = 2;
-            totalGroup.position.y = 10;
+            var xx=0.008;
+            totalGroup.scale.set(xx,xx,xx);
+            totalGroup.position.x = 1;
+            totalGroup.position.y = 6;
             totalGroup.position.z = 2;
             totalGroup.rotation.y = Math.PI;
             group.position.y = -1000;
