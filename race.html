@@ -21,6 +21,7 @@
     <script src="../three.js/examples/js/postprocessing/BloomPass.js"></script>
     <script src="../three.js/examples/js/renderers/Projector.js"></script>
     <script src="../three.js/examples/js/renderers/SVGRenderer.js"></script>
+    <script src="../three.js/examples/js/renderers/CanvasRenderer.js"></script>
     <script src="js/seed.js"></script>
     <style type="text/css">
         html,body{
@@ -45,7 +46,7 @@
             function NumFlow() {
                 return doNumberFlow(event.data)
             }
-            process.add([drawGround, alibaba,doBuilding, alibaba, transformCamera, NumFlow, showLogo]);
+            process.add([drawGround, drawSky, alibaba, doBuilding, alibaba, transformCamera, NumFlow, showLogo]);
             //drawLawn(10, 2, -9);
         }
     }
@@ -66,7 +67,6 @@
         setTimeout(function(){
             container = document.body;
             initGlobal();
-            initSky();
             bindMotion();
             startWorker();
         }, 200)
